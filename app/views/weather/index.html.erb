@@ -1,0 +1,10 @@
+<h1>Current Weather</h1>
+
+<%= form_tag(weather_index_path, method: :get) do %>
+  <%= text_field_tag :city, nil, placeholder: 'Enter city' %>
+  <%= submit_tag 'Get Weather' %>
+<% end %>
+
+<% if flash[:alert] %>
+  <p><%= flash[:alert] %></p>
+<% end %>
